@@ -14,6 +14,7 @@ class TAUUITests: TAUUITestBase {
 
     func testAllElements() throws {
         // UI tests must launch the application that they test.
+        
         app.staticTexts["welcomeMessage"].tap()
         app.staticTexts["enterCity"].tap()
         app.buttons["enrollButton"].tap()
@@ -30,6 +31,7 @@ class TAUUITests: TAUUITestBase {
         app.staticTexts["welcomeMessage"].tap()
         app.textFields["city"].tap()
         app.textFields["city"].typeText("London")
+        app.staticTexts["welcomeMessage"].tap()
         app.buttons["enrollButton"].tap()
         XCTAssert(app.staticTexts["Thanks for Joining!"].exists)
         
